@@ -1,0 +1,9 @@
+package com.yamini.src;
+
+import java.sql.*;
+
+public class Validation {
+    public static boolean checkUser(String user,String pass){
+    	
+    }
+}

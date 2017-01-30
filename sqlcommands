@@ -1,0 +1,11 @@
+CREATE TABLE `hiringportal`.`login` (`id` int( 11 ) NOT NULL AUTO_INCREMENT ,`username` varchar( 30 ) NOT NULL ,`email` varchar( 50 ) NOT NULL ,`password` varchar( 128 ) NOT NULL ,PRIMARY KEY ( `id` ) ,UNIQUE KEY `username` ( `username` )) ENGINE = MYISAM DEFAULT CHARSET = utf8;
+
+INSERT INTO `login`(`username`, `email`, `password`) VALUES ('user','email@domain.com','pass');
+
+CREATE TABLE `hiringportal`.`employees`(`id` int( 11 ) NOT NULL AUTO_INCREMENT ,`name` varchar( 30 ) NOT NULL,`skills` varchar( 50 ) NOT NULL,PRIMARY KEY ( `id` ));
+
+INSERT INTO `employees`(`name`, `skills`) VALUES ('yamini','java');
+INSERT INTO `employees`(`name`,`skills`) VALUES ('krishnaveni','javascript');
+INSERT INTO `employees`(`name`,`skills`) VALUES ('sravanthi','pega tool');
+INSERT INTO `employees`(`name`,`skills`) VALUES ('sarada','python');
+INSERT INTO `employees`(`name`,`skills`) VALUES ('sravanthi','Objective c');

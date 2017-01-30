@@ -1,0 +1,24 @@
+package com.yamini.src;
+
+import java.sql.*;
+
+public class Validation {
+    public static boolean checkUser(String user,String pass){
+    	boolean st = false;
+    	try{
+    		Class.forName("com.mysql.jdbc.Driver");
+			Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/hiringportal","root","root");
+			PreparedStatement pst = conn.prepareStatement("Select username,password from login where username=? and password=?");
+		    pst.setString(1,user);
+		    pst.setString(2, pass);
+		    ResultSet rs=pst.executeQuery();
+		    if(rs.next()){
+		    	out.println("Authentication Successful");
+		    }else{
+		    	out.println("Please enter valid username or password");
+		    }
+    	}catch(){
+    		
+    	}
+    }
+}
