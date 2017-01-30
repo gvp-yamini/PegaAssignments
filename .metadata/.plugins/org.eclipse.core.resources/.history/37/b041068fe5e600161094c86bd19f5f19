@@ -1,0 +1,23 @@
+
+public class MultipleCatch {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        try{
+        	 int a[] = new int[7];
+        	 a[4]=30/0;
+        	 System.out.println("Last statement in try block");
+        }catch(ArithmeticException e){
+      	  System.out.println("Error: Don't divide a number by Zero");
+        }catch(ArrayIndexOutOfBoundsException e){
+        	System.out.println("ArrayIndexOutOfBoundsException");
+        }catch(Exception e){
+        	System.out.println("Other Exceptions");
+        }
+        System.out.println("Out of try catch block");
+	}
+
+}

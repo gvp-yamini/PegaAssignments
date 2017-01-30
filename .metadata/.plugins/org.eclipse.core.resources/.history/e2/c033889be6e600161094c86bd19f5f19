@@ -1,0 +1,25 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+
+public class CheckedExceptions {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       FileInputStream fs= null;
+       try {
+		fs = new FileInputStream("C:/yaminiDrive/sample.txt");
+		int k;
+		while((k=fs.read())!=-1){
+			
+		}
+	} catch (FileNotFoundException e) {
+		// TODO Auto-generated catch block
+		e.printStackTrace();
+	}
+	}
+
+}

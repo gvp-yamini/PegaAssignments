@@ -1,0 +1,19 @@
+
+public class FinallyWithReturn {
+
+	/**
+	 * @param args
+	 */
+	public static int myMethod(){
+		try(){
+			
+		}finally{
+			System.out.println("inside finally");
+		}
+	}
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

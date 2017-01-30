@@ -1,0 +1,15 @@
+import java.io.FileInputStream;
+
+
+public class CheckedExceptions {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       FileInputStream fs= null;
+       fs = new FileInputStream("C:/yaminiDrive/sample.txt");
+	}
+
+}

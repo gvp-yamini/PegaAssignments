@@ -1,0 +1,24 @@
+
+public class PropagatingExceptions {
+  void m(){
+	  int data = 50/0;
+  }
+  void n(){
+	  m();
+  }
+  void p(){
+	  try{
+		  
+	  }catch(Exception e){
+		  e.printStackTrace();
+	  }
+  }
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
