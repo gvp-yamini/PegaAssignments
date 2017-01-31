@@ -1,0 +1,26 @@
+package multiThreading;
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+class ThreadPool{
+	private final BlockingQueue <Runnable> workerQueue;
+	private final Thread[] workerThreads;
+	private volatile boolean shutdown;
+	
+	public ThreadPool(int n){
+		workerQueue = new LinkedBlockingQueue<>();
+	}
+}
+
+public class ProduceConsumerWithThreadPool {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

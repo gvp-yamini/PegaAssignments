@@ -1,0 +1,18 @@
+package multiThreading;
+
+class ThreadPool{
+	private final BlockingQueue <Runnable> workerQueue;
+	
+}
+
+public class ProduceConsumerWithThreadPool {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

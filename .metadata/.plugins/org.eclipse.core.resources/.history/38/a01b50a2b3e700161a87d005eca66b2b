@@ -1,0 +1,66 @@
+package multiThreading;
+
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
+
+class ThreadPool{
+	private final BlockingQueue <Runnable> workerQueue;
+	private final Thread[] workerThreads;
+	private volatile boolean shutdown;
+	
+	public ThreadPool(int n){
+		workerQueue = new LinkedBlockingQueue<>();
+		workerThreads = new Thread[n];
+		for(int i=0;i<n;i++){
+			workerThreads[i]= new Worker("Pool Thread "+i);
+			workerThreads[i].start();
+		}
+	}
+	
+	public void addTask(Runnable r){
+		try{
+			workerQueue.put(r);
+		}catch(InterruptedException e){
+			e.printStackTrace();
+		}
+	}
+	
+	public void shutdown(){
+		while(!workerQueue.isEmpty()){
+			try{
+				Thread.sleep(1000);
+			}catch(InterruptedException e){
+				e.printStackTrace();
+			}
+		}
+		shutdown = true;
+		for(Thread workerThread: workerThreads){
+			workerThread.interrupt();
+		}
+	}
+	
+	private class Worker extends Thread{
+		public Worker(String name){
+			super(name);
+		}
+		public void run(){
+			while(!shutdown){
+				
+			}
+		}
+	}
+}
+
+
+
+public class ProduceConsumerWithThreadPool {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
