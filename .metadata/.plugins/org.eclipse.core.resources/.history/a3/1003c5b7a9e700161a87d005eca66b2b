@@ -1,0 +1,17 @@
+package multiThreading;
+
+class worker implements Runnable{
+	
+}
+
+public class SequenceNumbersWithAlternatingThreads {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

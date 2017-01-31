@@ -1,0 +1,45 @@
+package multiThreading;
+
+import java.util.List;
+
+class Producer implements Runnable{
+	private final List<Integer> resourceQueue;
+	private final int MAX_CAPACITY;
+	
+	Producer(List<Integer> sharedQueue,int size){
+		resourceQueue = sharedQueue;
+		MAX_CAPACITY = size;
+	}
+	public void run(){
+		int copunter=0;
+		while(true){
+			try{
+				produce(counter++);
+			}catch(InterruptedException e){
+				e.printStackTrace();
+			}
+		}
+	}
+	private void produce(int count) throws InterruptedException{
+		synchronised(resourceQueue){
+			
+		}
+	}
+}
+class Consumer implements Runnable{
+	public void run(){
+		
+	}
+}
+
+public class PrducerConsumerProblem {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

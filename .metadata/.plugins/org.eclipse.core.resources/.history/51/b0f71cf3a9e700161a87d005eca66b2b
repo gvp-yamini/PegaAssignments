@@ -1,0 +1,18 @@
+package multiThreading;
+
+class Worker implements Runnable{
+	BlockingQueue<Integer> q = new LinkedBlockingQueue<
+			Integer>(); 
+}
+
+public class SequenceNumbersWithAlternatingThreads {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

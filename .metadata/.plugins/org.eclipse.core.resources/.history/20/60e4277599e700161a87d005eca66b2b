@@ -1,0 +1,11 @@
+import java.io.FileInputStream;
+import java.io.IOException;
+
+class Parent5{
+	void msg() throws IOException{
+		System.out.println("Parent");
+	};
+}
+public class subclassUncheckedExceptions extends Parent5{
+  
+}

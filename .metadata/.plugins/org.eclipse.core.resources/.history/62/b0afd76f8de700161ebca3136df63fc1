@@ -1,0 +1,17 @@
+package multiThreading;
+
+public class JoinMultiThreading {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
+
+class MultiThread implements Runnable{
+	
+}

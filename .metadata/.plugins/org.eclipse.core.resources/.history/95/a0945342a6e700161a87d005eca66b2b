@@ -1,0 +1,25 @@
+package multiThreading;
+
+class Table{
+	synchronized void printTable(int n){
+		for(int i=1;i<=5;i++){
+			System.out.println(n*i);
+			try{
+				Thread.sleep(400);
+			}catch(Exception e){
+				e.printStackTrace();
+			}
+		}
+	}
+}
+public class ObjectLevelLock {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
