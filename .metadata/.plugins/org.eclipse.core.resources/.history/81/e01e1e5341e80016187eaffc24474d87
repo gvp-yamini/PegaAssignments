@@ -1,0 +1,18 @@
+package InputAndOutput;
+
+import java.io.FileReader;
+import java.io.FileWriter;
+
+public class CharacterStreamFileInputOutput {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		FileReader in = null;
+		FileWriter out = null;
+
+	}
+
+}

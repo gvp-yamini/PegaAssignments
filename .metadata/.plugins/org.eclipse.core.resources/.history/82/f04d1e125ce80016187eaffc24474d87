@@ -1,0 +1,15 @@
+package InputAndOutput;
+
+public class WriterFlush {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        String s = "Hello World";
+        
+        Writer writer = new PrintWriter(System.out);
+	}
+
+}

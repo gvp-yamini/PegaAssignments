@@ -1,0 +1,29 @@
+package InputAndOutput;
+
+import java.io.BufferedReader;
+import java.io.ByteArrayInputStream;
+import java.io.IOException;
+import java.io.InputStream;
+
+public class ByteArrayTOReader {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       
+		String str = "converting to input stream";
+		byte[] content = str.getBytes();
+		InputStream is = null;
+		BufferedReader bfReader = null;
+		try{
+			is = new ByteArrayInputStream(content);
+			bfReader = new BufferedReader(is);
+            String temp = null;
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,22 @@
+package InputAndOutput;
+
+import java.io.IOException;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
+
+public class Pipes {
+     
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		PipedInputStream pis = new PipedInputStream();
+	    PipedOutputStream pos = new PipedOutputStream();
+	    pos.connect(pis);
+
+	    Runnable producer = () -> produceData(pos);
+	    Runnable consumer = () -> consumeData(pis);
+	    new Thread(producer).start();
+	    new Thread(consumer).start();
+	}
+
+}

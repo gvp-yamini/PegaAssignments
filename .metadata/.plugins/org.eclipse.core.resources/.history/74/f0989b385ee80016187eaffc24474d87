@@ -1,0 +1,25 @@
+package InputAndOutput;
+
+import java.io.IOException;
+
+public class BufferedWriterFlush {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		StringWriter sw = null;
+		BufferedWriter bw = null;
+		String letters = "ABCDEFGHIJKL";
+		
+		try{
+			
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+
+	}
+
+}

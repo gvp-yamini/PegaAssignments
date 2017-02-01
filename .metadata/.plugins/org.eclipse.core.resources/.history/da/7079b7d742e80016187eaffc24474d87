@@ -1,0 +1,24 @@
+package InputAndOutput;
+
+import java.io.IOException;
+
+public class InputStreamReader {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		InputStreamReader cin= null;
+		try{
+			 cin = new InputStreamReader(System.in);
+			 System.out.println("Enter q to quit");
+		}finally{
+			if(cin != null){
+				cin.close();
+			}
+		}
+
+	}
+
+}

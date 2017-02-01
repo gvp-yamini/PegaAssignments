@@ -1,0 +1,16 @@
+package multiThreading;
+
+class Workery implements Runnable{
+	
+}
+public class SequenceNumbersWithWaitNotify {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

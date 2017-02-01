@@ -1,0 +1,64 @@
+package multiThreading;
+
+
+public class SequenceNumbersWithWaitNotify {
+
+	private static int count = 0;
+	private static int t1turn = 1;
+	private static final Object lock = null;
+	/**
+	 * @param args
+	 */
+	class Thread1 extends Thread{
+		
+
+		public void run(){
+			synchronized(lock){
+				System.out.println("thread1");
+				incrementCount();
+				t1turn = 0;
+				lock.notifyAll();
+				try {
+					lock.wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	class Thread2 extends Thread{
+		public void run(){
+			synchronized(lock){
+				System.out.println("thread2");
+				incrementCount();
+				if(t1turn==1){
+					try {
+						lock.wait();
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+				}
+				t1turn = 1;
+				lock.notify();
+				
+			}
+		}
+	}
+	
+	private static void incrementCount(){
+		count++;
+		System.out.println("incremented count by "+count+" by thread : "+Thread.currentThread().getName());
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		SequenceNumbersWithWaitNotify ob = new SequenceNumbersWithWaitNotify();
+		ob.Thread1 t1 =  new ob.Thread1();
+		t1.start();
+		t2.start();
+	}
+
+}

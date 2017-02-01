@@ -1,0 +1,14 @@
+package InputAndOutput;
+
+public class ByteArrayTOReader {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+       
+		String str = "converting to input stream";
+	}
+
+}

@@ -1,0 +1,34 @@
+package InputAndOutput;
+
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.StringWriter;
+
+public class BufferedWriterFlush {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		StringWriter sw = null;
+		BufferedWriter bw = null;
+		String letters = "ABCDEFGHIJKL";
+		
+		try{
+			sw = new StringWriter();
+			bw = new BufferedWriter(sw);
+			
+			for(char c: letters.toCharArray()){
+				bw.append(c);
+				bw.flush();
+				System.out.println(sw.getBuffer());
+			}
+		}catch(IOException e){
+			e.printStackTrace();
+		}
+
+	}
+
+}

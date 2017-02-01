@@ -1,0 +1,23 @@
+package InputAndOutput;
+
+import java.io.DataOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+
+public class DataInputAndOutputStreams {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 try {
+			DataOutputStream dataOutputStream =new DataOutputStream(
+			                    new FileOutputStream("data/data.bin"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

@@ -1,0 +1,39 @@
+package InputAndOutput;
+
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+
+class StudentInfo implements Serializable{
+	 String name;
+	 int rid;
+	 static String contact;
+	 StudentInfo(String n, int r, String c)
+	 {
+	  this.name = n;
+	  this.rid = r;
+	  this.contact = c;
+	 }
+}
+public class SerializingObject {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		try
+		 {
+		  StudentInfo si = new StudentInfo("yamini", 104, "110044");
+		  FileOutputStream fos = new FileOutputStream("student.ser");
+		  ObjectInputStream oos = new ObjectOutputStream(fos);
+		  oos.writeObject(si);
+		  oos.close();
+		  fos.close();
+		  }
+		  catch (Exception e)
+		  { e. printStackTrace(); }
+	}
+
+}

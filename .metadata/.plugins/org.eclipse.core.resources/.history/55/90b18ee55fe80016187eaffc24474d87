@@ -1,0 +1,16 @@
+package InputAndOutput;
+
+public class Pipes {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		final PipedOutputStream output = new PipedOutputStream();
+		final PipedOutputStream input = new PipedInputStream(output);
+
+	}
+
+}

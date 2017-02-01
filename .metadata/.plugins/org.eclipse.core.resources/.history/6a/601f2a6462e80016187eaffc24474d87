@@ -1,0 +1,15 @@
+package InputAndOutput;
+
+import java.io.IOException;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
+
+public class Pipes {
+     
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+	    
+	}
+
+}

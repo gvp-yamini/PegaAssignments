@@ -1,0 +1,14 @@
+package InputAndOutput;
+
+public class DataInputAndOutputStreams {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 DataOutputStream dataOutputStream =new DataOutputStream(
+	                        new FileOutputStream("data/data.bin"));
+	}
+
+}

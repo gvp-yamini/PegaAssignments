@@ -1,0 +1,15 @@
+package InputAndOutput;
+
+import java.io.BufferedReader;
+
+public class SystemInAndOut {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+	}
+
+}

@@ -1,0 +1,30 @@
+package InputAndOutput;
+
+import java.io.IOException;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
+
+public class Pipes {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		final PipedOutputStream output = new PipedOutputStream();
+		final PipedInputStream input = new PipedInputStream(output);
+		
+		class ThreadA extends Thread{
+			public void run(){
+				try{
+					output.write("Hello world".getBytes());
+				}cathc(IOException e){
+					
+				}
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,35 @@
+package InputAndOutput;
+
+import java.io.IOException;
+import java.io.PipedInputStream;
+import java.io.PipedOutputStream;
+
+public class Pipes {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws IOException {
+		// TODO Auto-generated method stub
+		
+		final PipedOutputStream output = new PipedOutputStream();
+		final PipedInputStream input = new PipedInputStream(output);
+		
+		class ThreadA extends Thread{
+			public void run(){
+				for(int i=0;i<10;i++){
+				  System.out.println("count-->"+i);
+				  try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				  System.out.println("My thread run is over");
+				}
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,50 @@
+package multiThreading;
+
+
+public class SequenceNumbersWithWaitNotify {
+
+	private static int count = 0;
+	/**
+	 * @param args
+	 */
+	class Thread1 implements Runnable{
+		public void run(){
+			synchronized(this){
+				incrementCount();
+				notify();
+				try {
+					wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	class Thread2 implements Runnable{
+		public void run(){
+			synchronized(this){
+				incrementCount();
+				notify();
+				try {
+					wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		}
+	}
+	
+	private static void incrementCount(){
+		count++;
+		System.out.println("incremented count by "+count+" by thread : "+Thread.currentThread().getName());
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+	}
+
+}

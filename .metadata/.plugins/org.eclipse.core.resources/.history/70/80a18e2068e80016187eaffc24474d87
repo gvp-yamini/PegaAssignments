@@ -1,0 +1,26 @@
+package InputAndOutput;
+
+import java.io.Serializable;
+
+class StudentInfo implements Serializable{
+	 String name;
+	 int rid;
+	 static String contact;
+	 studentinfo(string n, int r, string c)
+	 {
+	  this.name = n;
+	  this.rid = r;
+	  this.contact = c;
+	 }
+}
+public class SerializingObject {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
