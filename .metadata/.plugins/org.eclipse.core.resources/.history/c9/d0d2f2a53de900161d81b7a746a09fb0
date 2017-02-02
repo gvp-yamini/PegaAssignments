@@ -1,0 +1,19 @@
+package networking;
+
+import java.net.Socket;
+
+public class EchoClient {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        Socket clientSocket = null;
+        DataInputStream is = null;
+        PrintStream os = null;
+        DataInputStream inputLine = null;
+
+	}
+
+}

@@ -1,0 +1,35 @@
+package multiThreading;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class ThreadPoolY{
+	List<Connection> list = new ArrayList<Connection>();
+	ThreadPoolY(){
+		
+	}
+	
+	public Connection getConnection(){
+		Connection con = null;
+		try{
+			
+		}catch(InterruptedException e){
+			
+		}
+	}
+	
+}
+class Connection{
+	
+}
+public class ThreadPoolWaitNotify {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

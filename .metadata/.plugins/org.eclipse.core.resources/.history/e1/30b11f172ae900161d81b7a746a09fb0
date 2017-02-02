@@ -1,0 +1,27 @@
+package networking;
+
+import java.net.InetAddress;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class SimpleClient {
+
+	/**
+	 * @param args
+	 */
+	private static Socket socket;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        String host = "localhost";
+        int port = 8888;
+        try {
+			InetAddress address = InetAddress.getByName(host);
+			socket = new Socket(address,port);
+		} catch (UnknownHostException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

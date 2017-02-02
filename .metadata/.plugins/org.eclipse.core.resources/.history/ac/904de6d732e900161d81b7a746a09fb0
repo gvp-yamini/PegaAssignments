@@ -1,0 +1,13 @@
+package client;
+
+public class ServerThread implements Runnable{
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

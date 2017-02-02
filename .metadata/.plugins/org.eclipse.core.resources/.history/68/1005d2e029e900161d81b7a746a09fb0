@@ -1,0 +1,18 @@
+package networking;
+
+import java.net.Socket;
+
+public class SimpleClient {
+
+	/**
+	 * @param args
+	 */
+	private static Socket socket;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        String host = "localhost";
+        int port = 8888;
+	}
+
+}

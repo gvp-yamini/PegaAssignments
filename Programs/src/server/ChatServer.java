@@ -1,0 +1,46 @@
+package server;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.ArrayList;
+
+public class ChatServer {
+
+	/**
+	 * @param args
+	 */
+	private static ServerSocket serverSocket;
+	protected static ArrayList<ClientThread> clients;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int port = 8889;
+		try {
+			serverSocket = new ServerSocket(port);
+			acceptClients();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.exit(1);
+		}
+
+	}
+	
+	public static void acceptClients(){
+		while(true){
+			clients = new ArrayList<ClientThread>();
+			try{
+				 Socket socket = serverSocket.accept();
+				 ClientThread client = new ClientThread(socket);
+				 Thread thread = new Thread(client);
+				 thread.start();
+				 clients.add(client);
+			}catch(IOException e){
+				
+			}
+		}
+	}
+
+}

@@ -1,0 +1,9 @@
+package server;
+
+public class ClientThread extends ChatServer implements Runnable{
+
+	/**
+	 * @param args
+	 */
+	private Socket socket;
+}

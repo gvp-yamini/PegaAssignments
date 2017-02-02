@@ -1,0 +1,61 @@
+package multiThreading;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class ThreadPoolY{
+	List<Connection> list = new ArrayList<Connection>();
+	ThreadPoolY(){
+		
+	}
+	
+	public Connection getTask(){
+		Connection con = null;
+		try{
+			 synchronized(list){
+				 while(list.isEmpty()){
+					 list.wait();
+				 }
+				 return list.remove(0);
+			 }
+		}catch(InterruptedException e){
+			
+		}
+		return con;
+	}
+	
+   public void addTask(Connection con){
+	   try{
+		   synchronized(list){
+			   list.add(con);
+			   list.notifyAll();
+		   }
+	   }catch(Exception e){
+		   e.printStackTrace();
+	   }
+   }
+	
+}
+class Connection implements Runnable{
+		public void run(){
+			Integer e = rnd.incrementAndGet();
+			System.out.println("Inserting Element "+ e);
+			try{
+				queue.put(e);
+				Thread.sleep(1000);
+			}catch(InterruptedException err){
+				err.printStackTrace();
+			}
+		}
+	}
+public class ThreadPoolWaitNotify {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

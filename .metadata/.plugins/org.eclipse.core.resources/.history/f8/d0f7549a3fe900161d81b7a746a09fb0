@@ -1,0 +1,19 @@
+package multiThreading;
+
+class ThreadPoolY{
+	List<Connection> list = new ArrayList<Connection>();
+}
+class Connection{
+	
+}
+public class ThreadPoolWaitNotify {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

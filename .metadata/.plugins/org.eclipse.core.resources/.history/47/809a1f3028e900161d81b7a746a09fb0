@@ -1,0 +1,28 @@
+package networking;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+public class SimpleServer {
+
+	/**
+	 * @param args
+	 */
+	private static Socket socket;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int port = 8888;
+		try {
+			ServerSocket serverSocket = new ServerSocket(port);
+			socket = serverSocket.accept();
+			InputStream is = socket.getInputStream();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

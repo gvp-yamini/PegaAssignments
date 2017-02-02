@@ -1,0 +1,15 @@
+package networking;
+
+public class SimpleClient {
+
+	/**
+	 * @param args
+	 */
+	private static Socket socket;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

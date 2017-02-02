@@ -1,0 +1,36 @@
+package server;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class ChatServer {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int port = 8889;
+		try {
+			ServerSocket serverSocket = new ServerSocket(port);
+			acceptClients();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+			System.exit(1);
+		}
+
+	}
+	
+	public static void acceptClients(){
+		while(true){
+			try{
+				 Socket socket = serverSocket.accept();
+			}catch(IOException e){
+				
+			}
+		}
+	}
+
+}
